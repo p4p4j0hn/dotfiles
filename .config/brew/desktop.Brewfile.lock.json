@@ -1,0 +1,65 @@
+{
+  "entries": {
+    "brew": {
+      "exiftool": {
+        "version": "12.76",
+        "bottle": {
+          "rebuild": 0,
+          "root_url": "https://ghcr.io/v2/homebrew/core",
+          "files": {
+            "arm64_sequoia": {
+              "cellar": ":any_skip_relocation",
+              "url": "https://ghcr.io/v2/homebrew/core/exiftool/blobs/sha256:fab605944d81eeda3330a513de98d2ed450ccdee9225ab76dbbb735ac3ee141d",
+              "sha256": "fab605944d81eeda3330a513de98d2ed450ccdee9225ab76dbbb735ac3ee141d"
+            },
+            "arm64_sonoma": {
+              "cellar": ":any_skip_relocation",
+              "url": "https://ghcr.io/v2/homebrew/core/exiftool/blobs/sha256:eaefac7e07b3e99c42d2aa0a99c8e78355c6d6a874245445de60d45c846febd7",
+              "sha256": "eaefac7e07b3e99c42d2aa0a99c8e78355c6d6a874245445de60d45c846febd7"
+            },
+            "arm64_ventura": {
+              "cellar": ":any_skip_relocation",
+              "url": "https://ghcr.io/v2/homebrew/core/exiftool/blobs/sha256:c98ed3b14a4d1c66cdb7c19b21fab826ce4c53df12e7a02a51f093f342e7c3b3",
+              "sha256": "c98ed3b14a4d1c66cdb7c19b21fab826ce4c53df12e7a02a51f093f342e7c3b3"
+            },
+            "arm64_monterey": {
+              "cellar": ":any_skip_relocation",
+              "url": "https://ghcr.io/v2/homebrew/core/exiftool/blobs/sha256:c98ed3b14a4d1c66cdb7c19b21fab826ce4c53df12e7a02a51f093f342e7c3b3",
+              "sha256": "c98ed3b14a4d1c66cdb7c19b21fab826ce4c53df12e7a02a51f093f342e7c3b3"
+            },
+            "sonoma": {
+              "cellar": ":any_skip_relocation",
+              "url": "https://ghcr.io/v2/homebrew/core/exiftool/blobs/sha256:d7518674545b5024eb61598e5597c0a42a3eec16bebe249c5ac00de773a45169",
+              "sha256": "d7518674545b5024eb61598e5597c0a42a3eec16bebe249c5ac00de773a45169"
+            },
+            "ventura": {
+              "cellar": ":any_skip_relocation",
+              "url": "https://ghcr.io/v2/homebrew/core/exiftool/blobs/sha256:3a9703e2864c0e897286d4bb8d77d63612ca50fcec2c61e809c19838acb60474",
+              "sha256": "3a9703e2864c0e897286d4bb8d77d63612ca50fcec2c61e809c19838acb60474"
+            },
+            "monterey": {
+              "cellar": ":any_skip_relocation",
+              "url": "https://ghcr.io/v2/homebrew/core/exiftool/blobs/sha256:3a9703e2864c0e897286d4bb8d77d63612ca50fcec2c61e809c19838acb60474",
+              "sha256": "3a9703e2864c0e897286d4bb8d77d63612ca50fcec2c61e809c19838acb60474"
+            },
+            "x86_64_linux": {
+              "cellar": ":any_skip_relocation",
+              "url": "https://ghcr.io/v2/homebrew/core/exiftool/blobs/sha256:01ef54fe0dfd9c6b794a61a269cd1599b58a79851f74c4369fbb33f1737f813c",
+              "sha256": "01ef54fe0dfd9c6b794a61a269cd1599b58a79851f74c4369fbb33f1737f813c"
+            }
+          }
+        }
+      }
+    }
+  },
+  "system": {
+    "linux": {
+      "Bluefin-dx 39 (FROM Fedora Silverblue) (Archaeopteryx)": {
+        "HOMEBREW_VERSION": "4.4.2",
+        "HOMEBREW_PREFIX": "/home/linuxbrew/.linuxbrew",
+        "Homebrew/homebrew-core": "api",
+        "GCC": "13.3.1"
+      }
+    }
+  }
+}

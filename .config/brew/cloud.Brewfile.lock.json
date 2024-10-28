@@ -1,0 +1,65 @@
+{
+  "entries": {
+    "brew": {
+      "terraform": {
+        "version": "1.5.7",
+        "bottle": {
+          "rebuild": 1,
+          "root_url": "https://ghcr.io/v2/homebrew/core",
+          "files": {
+            "arm64_sequoia": {
+              "cellar": ":any_skip_relocation",
+              "url": "https://ghcr.io/v2/homebrew/core/terraform/blobs/sha256:87e8faf4dc4090ff8259a2cc258ac20518c154989af694475a3105d5ad57d664",
+              "sha256": "87e8faf4dc4090ff8259a2cc258ac20518c154989af694475a3105d5ad57d664"
+            },
+            "arm64_sonoma": {
+              "cellar": ":any_skip_relocation",
+              "url": "https://ghcr.io/v2/homebrew/core/terraform/blobs/sha256:82a9dcb1351fa533ea106fe0222678c89814a42ce4939d17c01178f4dbff4713",
+              "sha256": "82a9dcb1351fa533ea106fe0222678c89814a42ce4939d17c01178f4dbff4713"
+            },
+            "arm64_ventura": {
+              "cellar": ":any_skip_relocation",
+              "url": "https://ghcr.io/v2/homebrew/core/terraform/blobs/sha256:b9f647f7ab0dc2c8878c6f4ab51bcd412197bc02e30389b15cc37de2b0dfaf8b",
+              "sha256": "b9f647f7ab0dc2c8878c6f4ab51bcd412197bc02e30389b15cc37de2b0dfaf8b"
+            },
+            "arm64_monterey": {
+              "cellar": ":any_skip_relocation",
+              "url": "https://ghcr.io/v2/homebrew/core/terraform/blobs/sha256:8b14e9ffc5a5d154e5d6b58b94c18372c2f69c5ce1fd5735b351c1a1bac0187f",
+              "sha256": "8b14e9ffc5a5d154e5d6b58b94c18372c2f69c5ce1fd5735b351c1a1bac0187f"
+            },
+            "sonoma": {
+              "cellar": ":any_skip_relocation",
+              "url": "https://ghcr.io/v2/homebrew/core/terraform/blobs/sha256:9ce38d4ffe85f9530ba5911299d190f0a119610c4fd9fc6b30f57871647b61cb",
+              "sha256": "9ce38d4ffe85f9530ba5911299d190f0a119610c4fd9fc6b30f57871647b61cb"
+            },
+            "ventura": {
+              "cellar": ":any_skip_relocation",
+              "url": "https://ghcr.io/v2/homebrew/core/terraform/blobs/sha256:f68fee2494570a785d854056484c6853421e592a7e58489bfdc692ef87913412",
+              "sha256": "f68fee2494570a785d854056484c6853421e592a7e58489bfdc692ef87913412"
+            },
+            "monterey": {
+              "cellar": ":any_skip_relocation",
+              "url": "https://ghcr.io/v2/homebrew/core/terraform/blobs/sha256:b8cef4d46451e2780754cdf5c5510b8ed458025668a03beb1dd69c23b61396ce",
+              "sha256": "b8cef4d46451e2780754cdf5c5510b8ed458025668a03beb1dd69c23b61396ce"
+            },
+            "x86_64_linux": {
+              "cellar": ":any_skip_relocation",
+              "url": "https://ghcr.io/v2/homebrew/core/terraform/blobs/sha256:390afc2492fa4ea2fc7dce55efa25b9ae09e060639e1dc3d9c160718893881b3",
+              "sha256": "390afc2492fa4ea2fc7dce55efa25b9ae09e060639e1dc3d9c160718893881b3"
+            }
+          }
+        }
+      }
+    }
+  },
+  "system": {
+    "linux": {
+      "Bluefin-dx 39 (FROM Fedora Silverblue) (Archaeopteryx)": {
+        "HOMEBREW_VERSION": "4.4.2",
+        "HOMEBREW_PREFIX": "/home/linuxbrew/.linuxbrew",
+        "Homebrew/homebrew-core": "api",
+        "GCC": "13.3.1"
+      }
+    }
+  }
+}
