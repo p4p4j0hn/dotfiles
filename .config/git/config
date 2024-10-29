@@ -1,0 +1,31 @@
+[commit]
+	gpgSign = true
+
+[credential "https://github.com"]
+	helper = !/home/linuxbrew/.linuxbrew/bin/gh auth git-credential
+
+[github]
+	user = "p4p4j0hn"
+
+[gpg]
+	program = "/usr/bin/gpg"
+
+[init]
+	defaultBranch = "main"
+
+# [sendemail "schmidthaus-john"]
+# 	envelopeSender = "auto"
+# 	from = "John Schmidt <john@schmidthaus.rocks>"
+# 	smtpServer = "/nix/store/rpfyahcsrm3gbsb66b6xy9wii8l2x3rw-msmtp-1.8.22/bin/msmtp"
+
+[tag]
+	gpgSign = true
+
+[user]
+	email = "john@schmidthaus.rocks"
+	name = "John Schmidt"
+	signingKey = "1972A1A7296A2156!"
+[blame]
+	ignoreRevsFile = .git-blame-ignore-revs
+[credential "https://gist.github.com"]
+	helper = !/home/linuxbrew/.linuxbrew/bin/gh auth git-credential
