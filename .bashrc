@@ -135,6 +135,6 @@ fi
 eval "$(direnv hook bash)"
 
 # keep this at the bottom!
-. ./.bash-preexec.sh
+. ~/.bash-preexec.sh
 [ "$(command -v atuin)" ] && eval "$(atuin init bash --disable-up-arrow)"
 [ "$(command -v zoxide)" ] && eval "$(zoxide init bash)"
