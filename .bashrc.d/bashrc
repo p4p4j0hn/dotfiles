@@ -5,14 +5,17 @@ if command -v bws 2>&1 >/dev/null; then
   source <(bws completions bash)
 fi
 
-if command -v tea 2>&1 >/dev/null; then
+if [ "$(command -v tea)" ]; then
+  if ! [ -f "$HOME/.config/tea/autocomplete.sh" ]; then
+    tea autocomplete bash 2>&1 >/dev/null
+  fi
   PROG=tea source "$HOME/.config/tea/autocomplete.sh"
 fi
 
 # set bash completion to be more fuzzy.
 bind 'set completion-ignore-case on'
 
-if command -v direnv 2>&1 >/dev/null; then
+if [ "$(command -v direnv)" ]; then
   eval "$(direnv hook bash)"
 fi
 
