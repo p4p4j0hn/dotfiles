@@ -57,13 +57,3 @@ fi
 ### bling.sh source start
 #test -f /usr/share/ublue-os/bluefin-cli/bling.sh && source /usr/share/ublue-os/bluefin-cli/bling.sh
 ### bling.sh source end
-
-source <(~/.local/bin/bws completions bash)
-
-PROG=tea source "$HOME/.config/tea/autocomplete.sh"
-
-bind 'set completion-ignore-case on'
-
-export NVM_DIR="$HOME/.local/share/nvm"
-[ -s "$HOMEBREW_PREFIX/opt/nvm/nvm.sh" ] && \. "$HOMEBREW_PREFIX/opt/nvm/nvm.sh"                                       # This loads nvm
-[ -s "$HOMEBREW_PREFIX/opt/nvm/etc/bash_completion.d/nvm" ] && \. "$HOMEBREW_PREFIX/opt/nvm/etc/bash_completion.d/nvm" # This loads nvm bash_completion
