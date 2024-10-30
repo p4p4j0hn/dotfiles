@@ -31,5 +31,6 @@ fi
 
 # Set up Virtualenvwrapper
 if [ "$(command -v virtualenvwrapper.sh)" ]; then
+  export WORKON_HOME="$HOME/.local/share/virtualenvs"
   source virtualenvwrapper.sh
 fi
