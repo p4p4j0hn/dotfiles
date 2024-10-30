@@ -8,9 +8,9 @@ fi
 # User specific environment and startup programs
 
 # Set my $EDITOR to nvim or vim.
-if command -v nvim 2>&1 >/dev/null; then
+if [ "$(command -v nvim)" ]; then
   export EDITOR="nvim"
-elif ! [ command -v vim ] 2>&1 >/dev/null; then
+elif ! [ "$(command -v vim)" ]; then
   export EDITOR="nano"
 else
   export EDITOR="vim"
@@ -30,6 +30,6 @@ if [ -f "$HOMEBREW_PREFIX/opt/nvm/nvm.sh" ]; then
 fi
 
 # Set up Virtualenvwrapper
-if command -v virtualenvwrapper.sh 2>&1 >/dev/null; then
+if [ "$(command -v virtualenvwrapper.sh)" ]; then
   source virtualenvwrapper.sh
 fi
