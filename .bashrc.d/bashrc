@@ -1,7 +1,12 @@
 # .bashrc.d/bashrc
 # /* vim: set filetype=rc : */
 
-if command -v bws 2>&1 >/dev/null; then
+
+if [ "$(command -v eza)" ]; then
+  alias lla='eza -la --icons=auto --group-directories-first'
+fi
+
+if [ "$(command -v bws)" ]; then
   source <(bws completions bash)
 fi
 
