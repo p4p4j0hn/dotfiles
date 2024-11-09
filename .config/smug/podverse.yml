@@ -1,0 +1,22 @@
+session: "podverse"
+
+root: /var/home/john/git/podverse-dev
+
+windows:
+  - name: dev
+    root: .
+    commands: ["vim ."]
+    panes:
+      - commands: []
+
+  - name: api
+    root: podverse-api
+    commands: ["vim ."]
+    panes:
+      - commands: []
+
+  - name: web
+    root: podverse-web
+    commands: ["vim ."]
+    panes:
+      - commands: []
