@@ -1,0 +1,8 @@
+# /* vim: set filetype=rc : */
+
+if [ -f "$HOMEBREW_PREFIX/opt/nvm/nvm.sh" ]; then
+  use_nvm() {
+    type nvm >/dev/null 2>&1 || . "$HOMEBREW_PREFIX/opt/nvm/nvm.sh"
+    nvm use $(< .nvmrc)
+  }
+fi
