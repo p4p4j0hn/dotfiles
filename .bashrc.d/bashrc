@@ -1,6 +1,9 @@
 # .bashrc.d/bashrc
 # /* vim: set filetype=rc : */
 
+if [ "$(command -v nvim)" ]; then
+  alias vim='nvim'
+fi
 
 if [ "$(command -v eza)" ]; then
   alias lla='eza -la --icons=auto --group-directories-first'
@@ -50,4 +53,9 @@ fi
 if [ "$(command -v virtualenvwrapper.sh)" ]; then
   export WORKON_HOME="$HOME/.local/share/virtualenvs"
   source virtualenvwrapper.sh
+fi
+
+# Added by Toolbox App
+if [ -d "$HOME/.local/share/JetBrains/Toolbox/scripts/" ]; then
+  export PATH="$PATH:/var/home/john/.local/share/JetBrains/Toolbox/scripts"
 fi
