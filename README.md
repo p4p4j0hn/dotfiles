@@ -1,9 +1,9 @@
 # [tyrion/mr-template][]
 
-A template for [myrepos][] and [vcsh][].
+p4p4j0hn's dotfiles using [myrepos][] and [vcsh][].
 
 For a detailed explanation see:
-[*Conquer your dotfiles with VCSH and MR*][blog-post].
+[_Conquer your dotfiles with VCSH and MR_][blog-post].
 
 [tyrion/mr-template]: https://github.com/tyrion/mr-template/
 [myrepos]: https://myrepos.branchable.com/
@@ -12,13 +12,13 @@ For a detailed explanation see:
 
 ## Structure of the repository
 
-* `master` branch for README and stuff that won't end up in your `$HOME`. 
-* `mr` branch for the configuration of myrepos.
-* all other branches for your applications and their dotfiles.
+- `main` branch for README and stuff that won't end up in your `$HOME`.
+- `mr` branch for the configuration of myrepos.
+- all other branches for your applications and their dotfiles.
 
 ## Structure of the `mr` branch
 
-```
+```plain
 .
 ├── .config
 │   └── mr
@@ -31,9 +31,9 @@ For a detailed explanation see:
 
 The contents of this branch can be summarized as follows:
 
-* `.mrconfig`: the entrypoint configuration file for mr,
-* `.config/mr/available.d/`: repository definitions for your applications,
-* `.config/mr/config.d/`: repository definitions active in the current system.
+- `.mrconfig`: the entrypoint configuration file for mr,
+- `.config/mr/available.d/`: repository definitions for your applications,
+- `.config/mr/config.d/`: repository definitions active in the current system.
   Contains symlinks to `available.d/`.
 
 ## How to add a new application
@@ -49,19 +49,19 @@ The contents of this branch can be summarized as follows:
 
 Clone the mr branch with vcsh:
 
-```
-$ vcsh clone -b mr https://example.com/your-fork mr
+```bash
+vcsh clone -b mr https://example.com/your-fork mr
 ```
 
 Enable/disable the repository definitions that you want on the system:
 
-```
-$ cd .config/mr
-$ ln -s ../available.d/i3.vcsh config.d/
+```bash
+cd .config/mr
+ln -s ../available.d/i3.vcsh config.d/
 ```
 
 Checkout everything with mr:
 
-```
-$ mr checkout
+```bash
+mr checkout
 ```
