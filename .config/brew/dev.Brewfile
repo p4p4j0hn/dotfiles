@@ -1,4 +1,3 @@
-brew "devcontainer"
 brew "nvm"
 brew "gh"
 brew "glab"
