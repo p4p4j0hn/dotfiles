@@ -34,7 +34,7 @@ brew install myrepos vcsh
 # Clone mr branch
 pushd $HOME
 if ! [[ -d $HOME/.config/vcsh/repo.d/mr.git ]]; then
-  vcsh clone -b mr git@github.com:p4p4j0hn/dotfiles mr
+  vcsh clone -b mr https://github.com/p4p4j0hn/dotfiles mr
 else
   vcsh mr pull
 fi

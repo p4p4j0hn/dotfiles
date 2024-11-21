@@ -5,7 +5,6 @@ p4p4j0hn's dotfiles using [myrepos][] and [vcsh][].
 For a detailed explanation see:
 [_Conquer your dotfiles with VCSH and MR_][blog-post].
 
-[tyrion/mr-template]: https://github.com/tyrion/mr-template/
 [myrepos]: https://myrepos.branchable.com/
 [vcsh]: https://github.com/RichiH/vcsh
 [blog-post]: https://germano.dev/dotfiles/
@@ -49,7 +48,7 @@ The contents of this branch can be summarized as follows:
 Clone the mr branch with vcsh:
 
 ```bash
-vcsh clone -b mr git@github.com:p4p4j0hn/dotfiles.git mr
+vcsh clone -b mr https://github.com/p4p4j0hn/dotfiles mr
 ```
 
 Enable/disable the repository definitions that you want on the system:
