@@ -1,0 +1,3 @@
+[$HOME/.config/vcsh/repo.d/ublue_bash.git]
+order = 1
+checkout = vcsh clone -b ublue_bash git@github.com:p4p4j0hn/dotfiles.git ublue_bash

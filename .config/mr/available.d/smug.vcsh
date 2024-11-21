@@ -1,0 +1,3 @@
+[$HOME/.config/vcsh/repo.d/smug.git]
+order = 5
+checkout = vcsh clone -b smug git@github.com:p4p4j0hn/dotfiles.git smug

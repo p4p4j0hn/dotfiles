@@ -1,0 +1,3 @@
+[$HOME/.config/vcsh/repo.d/direnv.git]
+order = 5
+checkout = vcsh clone -b direnv git@github.com:p4p4j0hn/dotfiles.git direnv
