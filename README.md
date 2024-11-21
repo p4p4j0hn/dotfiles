@@ -1,4 +1,4 @@
-# [tyrion/mr-template][]
+# p4p4j0hn/dotfiles
 
 p4p4j0hn's dotfiles using [myrepos][] and [vcsh][].
 
@@ -38,19 +38,18 @@ The contents of this branch can be summarized as follows:
 
 ## How to add a new application
 
-1. Fork this repo
-2. Add a repository definition to `./config/mr/available.d/` in the `mr` branch.
-3. Symlink it to `config.d` if you want it to be activated by default.
-4. Create a new branch with `git checkout -b your_app init`.
-5. Add your dotfiles
-6. Push
+1. Add a repository definition to `./config/mr/available.d/` in the `mr` branch.
+2. Symlink it to `config.d` if you want it to be activated by default.
+3. Create a new branch with `git checkout -b your_app init`.
+4. Add your dotfiles
+5. Push
 
 ## How to use on a new system
 
 Clone the mr branch with vcsh:
 
 ```bash
-vcsh clone -b mr https://example.com/your-fork mr
+vcsh clone -b mr git@github.com:p4p4j0hn/dotfiles.git mr
 ```
 
 Enable/disable the repository definitions that you want on the system:
