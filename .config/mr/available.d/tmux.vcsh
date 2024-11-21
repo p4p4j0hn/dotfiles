@@ -1,3 +1,3 @@
 [$HOME/.config/vcsh/repo.d/tmux.git]
 order = 5
-checkout = vcsh clone -b tmux git@github.com:p4p4j0hn/dotfiles.git tmux
+checkout = vcsh clone -b tmux https://github.com/p4p4j0hn/dotfiles tmux
