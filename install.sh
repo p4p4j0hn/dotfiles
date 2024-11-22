@@ -20,7 +20,7 @@ fi
 # Install brew if required
 if ! [[ -d /home/linuxbrew/.linuxbrew ]]; then
   /bin/bash -c "NONINTERACTIVE=1 $(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-  sudo cp -r ./files/brew/* /etc/profile.d/
+  sudo cp -r $HOME/dotfiles/files/brew/* /etc/profile.d/
 fi
 
 # source brew environment if it doesn't already exist
