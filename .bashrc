@@ -1,8 +1,10 @@
 # .bashrc
 
 # Source global definitions
-if [ -f /etc/bashrc ]; then
+if [[ -f /etc/bashrc ]]; then
   . /etc/bashrc
+elif [[ -f /etc/bash.bashrc ]]; then
+  . /etc/bash.bashrc
 fi
 
 # User specific environment
@@ -15,7 +17,7 @@ export PATH
 # export SYSTEMD_PAGER=
 
 # User specific aliases and functions
-if [ -d ~/.bashrc.d ]; then
+if [[ -d ~/.bashrc.d ]]; then
   for rc in ~/.bashrc.d/*; do
     if [ -f "$rc" ]; then
       . "$rc"
@@ -26,7 +28,7 @@ unset rc
 
 ## From ublue bling
 # ls aliases
-if [ "$(command -v eza)" ]; then
+if [[ "$(command -v eza)" ]]; then
   alias ll='eza -l --icons=auto --group-directories-first'
   alias l.='eza -d .*'
   alias ls='eza'
@@ -34,7 +36,7 @@ if [ "$(command -v eza)" ]; then
 fi
 
 # ugrep for grep
-if [ "$(command -v ug)" ]; then
+if [[ "$(command -v ug)" ]]; then
   alias grep='ug'
   alias egrep='ug -E'
   alias fgrep='ug -F'
@@ -43,7 +45,7 @@ if [ "$(command -v ug)" ]; then
   alias xzfgrep='ug -zF'
 fi
 
-if [ "$(basename "$SHELL")" = "bash" ]; then
+if [[ "$(basename "$SHELL")" = "bash" ]]; then
   #shellcheck disable=SC1091
   . /usr/share/bash-prexec
   [ "$(command -v atuin)" ] && eval "$(atuin init bash --disable-up-arrow)"
