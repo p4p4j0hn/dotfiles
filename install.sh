@@ -45,12 +45,12 @@ mv .profile .profile.bak
 mr checkout
 popd
 
-# Install tmux plugins
-echo "Installing tmux plugins"
-$HOME/.config/tmux/install_plugins.sh
-
 # install brew applications
 pushd "$HOME/.config/brew"
 brew bundle --file common.Brewfile --no-lock
 brew bundle --file dev.Brewfile --no-lock
 popd
+
+# Install tmux plugins
+echo "Installing tmux plugins"
+$HOME/.config/tmux/install_plugins.sh
