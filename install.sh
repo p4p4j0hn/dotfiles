@@ -35,8 +35,6 @@ brew install myrepos vcsh
 pushd $HOME
 if ! [[ -d $HOME/.config/vcsh/repo.d/mr.git ]]; then
   vcsh clone -b mr https://github.com/p4p4j0hn/dotfiles mr
-else
-  vcsh mr pull
 fi
 popd
 
@@ -46,6 +44,10 @@ mv .bashrc .bashrc.bak
 mv .profile .profile.bak
 mr checkout
 popd
+
+# Install tmux plugins
+echo "Installing tmux plugins"
+$HOME/.config/tmux/install_plugins.sh
 
 # install brew applications
 pushd "$HOME/.config/brew"
