@@ -2,6 +2,35 @@
 
 set -oeux pipefail
 
+clone-dotfiles() {
+  # Clone mr branch
+  pushd $HOME
+  if ! [[ -d $HOME/.config/vcsh/repo.d/mr.git ]]; then
+    vcsh clone -b mr https://github.com/p4p4j0hn/dotfiles mr
+  fi
+  popd
+
+  # Checkout all vcsh repos
+  pushd $HOME
+  mv .bashrc .bashrc.bak
+  mv .profile .profile.bak
+  mr checkout
+  popd
+}
+
+install-tmux-plugins() {
+  # Install tmux plugins
+  echo "Installing tmux plugins"
+  $HOME/.config/tmux/install_plugins.sh
+}
+
+# if in a devcontainer, just clone the dotfiles
+if [[ -v DEVCONTAINER ]]; then
+  clone-dotfiles
+  install-tmux-plugins
+  exit
+fi
+
 # Install starship if required
 if ! [[ "$(command -v starship)" ]]; then
   curl -sS https://starship.rs/install.sh | sudo sh -s -- -y -b /usr/local/bin
@@ -31,25 +60,15 @@ fi
 # Install myrepos and vcsh from brew
 brew install myrepos vcsh
 
-# Clone mr branch
-pushd $HOME
-if ! [[ -d $HOME/.config/vcsh/repo.d/mr.git ]]; then
-  vcsh clone -b mr https://github.com/p4p4j0hn/dotfiles mr
-fi
-popd
-
-# Checkout all vcsh repos
-pushd $HOME
-mv .bashrc .bashrc.bak
-mv .profile .profile.bak
-mr checkout
-popd
+clone-dotfiles
 
 # install brew applications
 pushd "$HOME/.config/brew"
-brew bundle --file common.Brewfile --no-lock
+if ! [[ -f brew-init-done ]]; then
+  brew bundle --file common.Brewfile --no-lock
+  touch brew-init-done
+fi
 popd
 
 # Install tmux plugins
-echo "Installing tmux plugins"
-$HOME/.config/tmux/install_plugins.sh
+install-tmux-plugins
