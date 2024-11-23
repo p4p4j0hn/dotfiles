@@ -45,6 +45,11 @@ if [[ "$(command -v ug)" ]]; then
   alias xzfgrep='ug -zF'
 fi
 
+# bat for cat
+if [[ "(command -v bat)" ]]; then
+  alias cat='bat --pager=none --style=plain'
+fi
+
 if [[ "$(basename "$SHELL")" = "bash" ]]; then
   #shellcheck disable=SC1091
   . /usr/share/bash-prexec
