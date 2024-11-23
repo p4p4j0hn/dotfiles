@@ -48,7 +48,6 @@ popd
 # install brew applications
 pushd "$HOME/.config/brew"
 brew bundle --file common.Brewfile --no-lock
-brew bundle --file dev.Brewfile --no-lock
 popd
 
 # Install tmux plugins
