@@ -55,7 +55,6 @@ if [[ "$(basename "$SHELL")" = "bash" ]]; then
   . /usr/share/bash-prexec
   [ "$(command -v atuin)" ] && eval "$(atuin init bash --disable-up-arrow)"
   [ "$(command -v zoxide)" ] && eval "$(zoxide init bash)"
-  [ "$(command -v fzf)" ] && eval "$(fzf --bash)"
 elif [ "$(basename "$SHELL")" = "zsh" ]; then
   [ "$(command -v atuin)" ] && eval "$(atuin init zsh)"
   [ "$(command -v zoxide)" ] && eval "$(zoxide init zsh)"
