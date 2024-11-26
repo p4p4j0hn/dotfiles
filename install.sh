@@ -29,6 +29,9 @@ if [[ -v DEVCONTAINER ]]; then
   clone-dotfiles
   install-tmux-plugins
   echo 'eval "$(starship init bash)"' | sudo tee -a /etc/bash.bashrc
+  mkdir -p $HOME/.ssh
+  chmod 700 $HOME/.ssh
+  echo "sk-ssh-ed25519@openssh.com AAAAGnNrLXNzaC1lZDI1NTE5QG9wZW5zc2guY29tAAAAIEZn+WQaOkErHh/HdYAigbhaGVpexvzAnUr47T38RnChAAAABHNzaDo= john@schmidthaus.rocks" >$HOME/.ssh/authorized_keys
   exit
 fi
 
