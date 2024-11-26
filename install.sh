@@ -28,6 +28,7 @@ install-tmux-plugins() {
 if [[ -v DEVCONTAINER ]]; then
   clone-dotfiles
   install-tmux-plugins
+  echo 'eval "$(starship init bash)"' | sudo tee -a /etc/bash.bashrc
   exit
 fi
 
