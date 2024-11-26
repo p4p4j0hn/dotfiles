@@ -61,5 +61,5 @@ if [ -d "$HOME/.local/share/JetBrains/Toolbox/scripts/" ]; then
 fi
 
 # Ensure proper locale
-export LC_ALL=en_US.UTF-8
-export LANG=en_US.UTF-8
+export LC_ALL=en_CA.UTF-8
+export LANG=en_CA.UTF-8
