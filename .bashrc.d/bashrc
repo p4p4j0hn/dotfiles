@@ -21,7 +21,7 @@ if [ "$(command -v tea)" ]; then
 fi
 
 # set bash completion to be more fuzzy.
-bind 'set completion-ignore-case on'
+# bind 'set completion-ignore-case on'
 
 if [ "$(command -v direnv)" ]; then
   eval "$(direnv hook bash)"
