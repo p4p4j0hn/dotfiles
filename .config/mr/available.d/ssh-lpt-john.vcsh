@@ -1,0 +1,2 @@
+[$HOME/.config/vcsh/repo.d/ssh-lpt-john.git]
+checkout = vcsh clone -b ssh-lpt-john https://github.com/p4p4j0hn/dotfiles ssh-lpt-john
