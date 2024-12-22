@@ -1,0 +1,2 @@
+[$HOME/.config/vcsh/repo.d/distrobox.git]
+checkout = vcsh clone -b distrobox https://github.com/p4p4j0hn/dotfiles distrobox
