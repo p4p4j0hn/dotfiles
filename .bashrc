@@ -52,7 +52,7 @@ fi
 
 if [[ "$(basename "$SHELL")" = "bash" ]]; then
   #shellcheck disable=SC1091
-  . /usr/share/bash-prexec
+  [ -f /home/linuxbrew/.linuxbrew/etc/profile.d/bash-preexec.sh ] && . /home/linuxbrew/.linuxbrew/etc/profile.d/bash-preexec.sh
   [ "$(command -v atuin)" ] && eval "$(atuin init bash --disable-up-arrow)"
   [ "$(command -v zoxide)" ] && eval "$(zoxide init bash)"
 elif [ "$(basename "$SHELL")" = "zsh" ]; then
