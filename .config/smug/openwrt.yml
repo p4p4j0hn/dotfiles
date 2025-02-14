@@ -1,0 +1,12 @@
+session: "openwrt"
+
+root: /var/home/john/git/openwrt-dev
+
+windows:
+  - name: source
+    root: source
+    commands: ["vim ."]
+
+  - name: packages
+    root: packages
+    commands: ["vim ."]
