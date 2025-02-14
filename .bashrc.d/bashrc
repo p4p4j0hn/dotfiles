@@ -56,10 +56,22 @@ if [ "$(command -v virtualenvwrapper.sh)" ]; then
 fi
 
 # Added by Toolbox App
-if [ -d "$HOME/.local/share/JetBrains/Toolbox/scripts/" ]; then
+if [[ -d "$HOME/.local/share/JetBrains/Toolbox/scripts/" ]] ; then
   export PATH="$PATH:$HOME/.local/share/JetBrains/Toolbox/scripts"
 fi
 
 # Ensure proper locale
 export LC_ALL=en_CA.UTF-8
 export LANG=en_CA.UTF-8
+
+# Set tmux tmpdir when in a distrobox
+if [[ -n $CONTAINER_ID ]]; then
+  export TMUX_TMPDIR=/tmp/tmux-${CONTAINER_ID}-1000
+fi
+
+# Set GOPATH if it exists
+if [[ -d $HOME/go ]]; then
+  export GOPATH="$HOME/go"
+  export GOBINDIR="$GOPATH/bin"
+  export PATH="$PATH:$GOPATH/bin"
+fi

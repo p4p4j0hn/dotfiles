@@ -1,0 +1,12 @@
+# ~/.bashrc.d/bash_functions_rc
+# /* vim: set filetype=rc : */
+
+function gsc() {
+  if [[ -n $1 ]]; then
+    git -C $1 reset --hard HEAD
+    git -C $1 clean -xdff
+  else
+    git reset --hard HEAD
+    git clean -xdff
+  fi
+}
