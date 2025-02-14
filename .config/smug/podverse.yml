@@ -1,22 +1,33 @@
 session: "podverse"
-
-root: /var/home/john/git/podverse-dev
-
+root: /var/home/john/git/podverse/podverse-ops
+before_start:
+  - make dev_up
+env:
+  PROJECT_DIR: /var/home/john/git/podverse/podverse-ops
+stop:
+  - cd $PROJECT_DIR && make dev_down
 windows:
-  - name: dev
+  - name: ops
     root: .
-    commands: ["vim ."]
-    panes:
-      - commands: []
-
-  - name: api
-    root: podverse-api
-    commands: ["vim ."]
-    panes:
-      - commands: []
-
+    commands:
+      - vim .
   - name: web
-    root: podverse-web
-    commands: ["vim ."]
+    root: ./projects/podverse-web
+    commands:
+      - vim .
+  - name: api
+    root: ./projects/podverse-api
+    commands:
+      - vim .
+  - name: monitor
+    root: .
     panes:
-      - commands: []
+      - commands:
+          - "docker logs -f podverse_manticore_local"
+      - commands:
+          - make dev_start_api
+      - commands:
+          - "docker logs -f podverse_db_local"
+    commands:
+      - make dev_start_web
+    layout: ae71,126x31,0,0{63x31,0,0[63x15,0,0,42,63x15,0,16,45],62x31,64,0[62x15,64,0,43,62x15,64,16,44]}
