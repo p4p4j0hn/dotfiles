@@ -1,0 +1,32 @@
+session: smart-brain
+root: /var/home/john/git/ZTM/WebDev/smart-brain
+before_start:
+  - make dev_init
+env:
+  PROJECT_DIR: /var/home/john/git/ZTM/WebDev/smart-brain
+stop:
+  - cd $PROJECT_DIR && make dev_down
+windows:
+  - name: dev
+    root: .
+    commands:
+      - vim .
+  - name: frontend
+    root: ./frontend
+    commands:
+      - vim .
+  - name: backend
+    root: ./backend
+    commands:
+      - vim .
+  - name: monitor
+    root: .
+    panes:
+      - commands: []
+      - commands:
+          - make start_backend
+      - commands:
+          - "docker logs -f smartbrain_db"
+    commands:
+      - make start_frontend
+    layout: ae71,126x31,0,0{63x31,0,0[63x15,0,0,42,63x15,0,16,45],62x31,64,0[62x15,64,0,43,62x15,64,16,44]}
