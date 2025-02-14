@@ -9,8 +9,8 @@ fi
 
 if [ -f "$HOMEBREW_PREFIX/bin/virtualenvwrapper.sh" ]; then
   use_venv () {
-     export VIRTUAL_ENV = "$ {HOME} /.local/share/virtualenvs/ $ { 1}"
-     PATH_add "$ VIRTUAL_ENV / bin"
+     export VIRTUAL_ENV="${HOME}/.local/share/virtualenvs/${1}"
+     PATH_add "$VIRTUAL_ENV/bin"
   }
   use_vwrapper () {
     source $HOMEBREW_PREFIX/bin/virtualenvwrapper.sh
