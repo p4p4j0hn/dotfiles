@@ -1,10 +1,6 @@
 # .bashrc.d/bashrc
 # /* vim: set filetype=rc : */
 
-if [ "$(command -v nvim)" ]; then
-  alias vim='nvim'
-fi
-
 if [ "$(command -v eza)" ]; then
   alias lla='eza -la --icons=auto --group-directories-first'
 fi
@@ -28,9 +24,9 @@ if [ "$(command -v direnv)" ]; then
 fi
 
 # Set my $EDITOR to nvim or vim.
-if [ "$(command -v nvim)" ]; then
-  export EDITOR="nvim"
-elif ! [ "$(command -v vim)" ]; then
+#if [ "$(command -v nvim)" ]; then
+#  export EDITOR="nvim"
+if ! [ "$(command -v vim)" ]; then
   export EDITOR="nano"
 else
   export EDITOR="vim"
