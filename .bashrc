@@ -26,7 +26,9 @@ if [[ -d ~/.bashrc.d ]]; then
 fi
 unset rc
 
-[ -f /usr/share/bash-prexec ] && . /usr/share/bash-prexec
+[ -f "$HOME/.atuin/bin/env" ] && . "$HOME/.atuin/bin/env"
+
+[ -f "$HOME/.local/share/bash-preexec.sh" ] && . "$HOME/.local/share/bash-preexec.sh"
 [ "$(command -v atuin)" ] && eval "$(atuin init bash --disable-up-arrow)"
 [ "$(command -v zoxide)" ] && eval "$(zoxide init bash)"
-
+[ "$(command -v starship)" ] && eval "$(starship init bash)"
