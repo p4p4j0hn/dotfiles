@@ -28,4 +28,4 @@
 [blame]
 	ignoreRevsFile = .git-blame-ignore-revs
 [credential "https://gist.github.com"]
-	helper = !/home/linuxbrew/.linuxbrew/bin/gh auth git-credential
+	helper = !/usr/bin/gh auth git-credential
