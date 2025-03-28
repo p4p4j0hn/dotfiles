@@ -10,3 +10,12 @@ function gsc() {
     git clean -xdff
   fi
 }
+dbc () {
+    proxy="http://127.0.0.1:3142"
+    t="echo 'Acquire::http::Proxy \\\""${proxy}"\\\";' > /etc/apt/apt.conf.d/proxy.conf; echo 'Acquire::http::Pipeline-Depth \\\""200"\\\";' >> /etc/apt/apt.conf.d/proxy.conf"
+    http_proxy="${proxy}" \
+    distrobox create \
+        --image "quay.io/toolbx-images/debian-toolbox:$1" \
+        --name "$2" \
+        --pre-init-hooks "${t}"
+}

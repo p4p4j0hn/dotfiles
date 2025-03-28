@@ -25,4 +25,7 @@ if [[ "$(command -v bat)" ]]; then
     alias cat='bat --pager=none --style=plain'
 fi
 
-
+# distrobox
+if [[ "$(command -v distrobox)" ]]; then
+    alias dbe="distrobox enter"
+fi
