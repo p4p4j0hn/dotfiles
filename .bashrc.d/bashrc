@@ -60,3 +60,7 @@ if [[ -d $HOME/go ]]; then
   export GOBINDIR="$GOPATH/bin"
   export PATH="$PATH:$GOPATH/bin"
 fi
+
+export DEBEMAIL='john@schmidthaus.rocks'
+export DEBFULLNAME='John Schmidt'
+export GPGKEY=729F6BE4A82641BC
