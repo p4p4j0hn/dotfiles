@@ -42,10 +42,9 @@ if [ -f "$HOMEBREW_PREFIX/opt/nvm/nvm.sh" ]; then
 fi
 
 # Set up Virtualenvwrapper
-if [ "$(command -v virtualenvwrapper.sh)" ]; then
-  export WORKON_HOME="$HOME/.local/share/virtualenvs"
-  source virtualenvwrapper.sh
-fi
+[ -f "/usr/share/virtualenvwrapper/virtualenvwrapper.sh" ] && \
+    export WORKON_HOME="$HOME/.local/share/virtualenvs" && \
+    \. /usr/share/virtualenvwrapper/virtualenvwrapper.sh
 
 # Added by Toolbox App
 if [[ -d "$HOME/.local/share/JetBrains/Toolbox/scripts/" ]] ; then
