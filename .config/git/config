@@ -2,13 +2,13 @@
 	gpgSign = true
 
 [credential "https://github.com"]
-	helper = !/home/linuxbrew/.linuxbrew/bin/gh auth git-credential
+	helper = !/usr/bin/gh auth git-credential
 
 [github]
 	user = "p4p4j0hn"
 
 [gpg]
-	program = "/usr/bin/gpg"
+	program = "/usr/bin/gpg2"
 
 [init]
 	defaultBranch = "main"
@@ -25,9 +25,11 @@
 	email = "john@schmidthaus.rocks"
 	name = "John Schmidt"
 	signingKey = "1972A1A7296A2156!"
-[blame]
-	ignoreRevsFile = .git-blame-ignore-revs
 [credential "https://gist.github.com"]
 	helper = !/usr/bin/gh auth git-credential
 [submodule]
 	recurse = true
+[cola]
+	spellcheck = false
+[core]
+	excludesfile = /home/john/.config/git/gitignore
