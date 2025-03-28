@@ -31,4 +31,3 @@ unset rc
 [ -f "$HOME/.local/share/bash-preexec.sh" ] && . "$HOME/.local/share/bash-preexec.sh"
 [ "$(command -v atuin)" ] && eval "$(atuin init bash --disable-up-arrow)"
 [ "$(command -v zoxide)" ] && eval "$(zoxide init bash)"
-[ "$(command -v starship)" ] && eval "$(starship init bash)"
