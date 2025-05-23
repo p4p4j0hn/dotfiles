@@ -1,0 +1,24 @@
+{
+  "Blog template": {
+    "description": "Blog template for a new article",
+    "prefix": "bt",
+    "body": [
+      "---",
+      "title: \"${1:blog title}\"",
+      "description: \"${2:blog description}\"",
+      "pubDate: $CURRENT_YEAR-$CURRENT_MONTH-${CURRENT_DATE}T$CURRENT_HOUR:$CURRENT_MINUTE:${CURRENT_SECOND}$CURRENT_TIMEZONE_OFFSET",
+      "updatedDate:",
+      "draft: true",
+      "author: \"p4p4j0hn\"",
+      "heroImage: \"${3:hero image url}\"",
+      "heroImageAlt: \"${4:hero image alt description}\"",
+      "tags:$5",
+      "relatedPosts:$6",
+      "---\n",
+      "## Motivation\n",
+      "$0",
+      "## Conclusion\n",
+      "## References\n"
+    ]
+  }
+}
