@@ -61,6 +61,10 @@ if [[ -d $HOME/go ]]; then
   export PATH="$PATH:$GOPATH/bin"
 fi
 
+# Add terraform completions
+[ "$(command -v terraform)" ] && eval "$(complete -C /usr/bin/terraform terraform)"
+
+# Debian Packager info
 export DEBEMAIL='john@schmidthaus.rocks'
 export DEBFULLNAME='John Schmidt'
 export GPGKEY=729F6BE4A82641BC
