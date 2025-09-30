@@ -64,6 +64,9 @@ fi
 # Add terraform completions
 [ "$(command -v terraform)" ] && eval "$(complete -C /usr/bin/terraform terraform)"
 
+# Add tailscale completions
+[ "$(command -v tailscale)" ] && source <(tailscale completion bash)
+
 # Debian Packager info
 export DEBEMAIL='john@schmidthaus.rocks'
 export DEBFULLNAME='John Schmidt'
