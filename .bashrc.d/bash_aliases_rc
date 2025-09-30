@@ -21,11 +21,10 @@ fi
 # fi
 
 # bat for cat
-if [[ "$(command -v bat)" ]]; then
-    alias cat='bat --pager=none --style=plain'
-fi
+[[ "$(command -v bat)" ]] && alias cat='bat --pager=none --style=plain'
 
 # distrobox
-if [[ "$(command -v distrobox)" ]]; then
-    alias dbe="distrobox enter"
-fi
+[[ "$(command -v distrobox)" ]] && alias dbe="distrobox enter"
+
+# SSH
+alias insecssh='ssh -o "StrictHostKeyChecking=no" -o "UserKnownHostsFile=/dev/null"'
