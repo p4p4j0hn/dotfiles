@@ -38,7 +38,10 @@ fi
 # Set up Virtualenvwrapper
 [ -f "/usr/share/virtualenvwrapper/virtualenvwrapper.sh" ] && \
     export WORKON_HOME="$HOME/.local/share/virtualenvs" && \
-    \. /usr/share/virtualenvwrapper/virtualenvwrapper.sh
+    \. /usr/share/virtualenvwrapper/virtualenvwrapper.sh && \
+    export PROJECT_HOME="$HOME/git"
+
+PS1='$(show_virtual_env)'$PS1
 
 # Added by Toolbox App
 if [[ -d "$HOME/.local/share/JetBrains/Toolbox/scripts/" ]] ; then
@@ -50,6 +53,7 @@ export LC_ALL=en_CA.UTF-8
 export LANG=en_CA.UTF-8
 
 # Set tmux tmpdir when in a distrobox
+# Not sure if this is even working.
 if [[ -n $CONTAINER_ID ]]; then
   export TMUX_TMPDIR=/tmp/tmux-${CONTAINER_ID}-1000
 fi

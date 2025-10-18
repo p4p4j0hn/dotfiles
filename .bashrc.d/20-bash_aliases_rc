@@ -21,7 +21,7 @@ fi
 # fi
 
 # bat for cat
-[[ "$(command -v bat)" ]] && alias cat='bat --pager=none --style=plain'
+[[ "$(command -v batcat)" ]] && alias cat='batcat --pager=none --style=plain'
 
 # distrobox
 [[ "$(command -v distrobox)" ]] && alias dbe="distrobox enter"
