@@ -34,3 +34,6 @@ tlp
 tlp-rdw
 urlview
 waypipe
+tealdeer
+batcat
+
