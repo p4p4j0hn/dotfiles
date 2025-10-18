@@ -7,6 +7,12 @@ elif [[ -f /etc/bash.bashrc ]]; then
     . /etc/bash.bashrc
 fi
 
+# If not running interactively, don't do anything
+case $- in
+*i*) ;;
+*) return ;;
+esac
+
 # User specific environment
 if ! [[ "$PATH" =~ "$HOME/.local/bin:$HOME/bin:" ]]; then
     PATH="$HOME/.local/bin:$HOME/bin:$PATH"
