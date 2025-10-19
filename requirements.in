@@ -1,0 +1,2 @@
+# requirements.in
+ansible==12.1.0
