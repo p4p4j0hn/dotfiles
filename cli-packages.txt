@@ -26,3 +26,4 @@ xz-utils
 yq
 zoxide
 zstd
+ncdu
