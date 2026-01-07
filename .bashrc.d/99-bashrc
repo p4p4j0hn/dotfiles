@@ -67,6 +67,9 @@ fi
 # Add tailscale completions
 [ "$(command -v tailscale)" ] && source <(tailscale completion bash)
 
+# Add atuin completions
+[ "$(command -v atuin)" ] && source <(atuin gen-completions -s bash)
+
 # Debian Packager info
 export DEBEMAIL='john@schmidthaus.rocks'
 export DEBFULLNAME='John Schmidt'
