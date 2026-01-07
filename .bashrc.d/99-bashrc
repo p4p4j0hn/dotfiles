@@ -9,12 +9,7 @@ if [ "$(command -v bws)" ]; then
   source <(bws completions bash)
 fi
 
-if [ "$(command -v tea)" ]; then
-  if ! [ -f "$HOME/.config/tea/autocomplete.sh" ]; then
-    tea autocomplete bash 2>&1 >/dev/null
-  fi
-  PROG=tea source "$HOME/.config/tea/autocomplete.sh"
-fi
+[ "$(command -v tea)" ] && source <(tea completion bash)
 
 # set bash completion to be more fuzzy.
 # bind 'set completion-ignore-case on'
