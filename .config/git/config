@@ -33,3 +33,5 @@
 	spellcheck = false
 [core]
 	excludesfile = /home/john/.config/git/gitignore
+[push]
+	autoSetupRemote = true
