@@ -3,3 +3,5 @@ git:
   autoRefresh: false
   commit:
     signOff: true
+gui:
+  useHunkModeInStagingView: false
